@@ -57,3 +57,15 @@ void List::PrintList() {
         curr = curr -> next;
     }
 }
+
+void List::SearchRecursive(node* Ptr, int SearchValue) {
+    if(Ptr == NULL) {
+        cout << SearchValue << " was not found.\n";
+    }
+    else if(Ptr -> data == SearchValue) {
+        cout << SearchValue << " is in the list.\n";
+    }
+    else {
+        SearchRecursive(Ptr -> next, SearchValue);
+    }
+}
