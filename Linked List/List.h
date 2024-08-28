@@ -2,7 +2,7 @@
 #define LIST_H
 
 class List{
-private: //This is where the data goes.
+    private: //This is where the data goes.
 
         typedef struct node{
             int data;
@@ -13,11 +13,12 @@ private: //This is where the data goes.
         nodePtr curr; 
         nodePtr temp; 
 
-public: //This is where the functions go.
-    List();
-    void AddNode(int addData);
-    void DeleteNode(int delData); 
-    void PrintList();
+    public: //This is where the functions go.
+        List();
+        void AddNode(int addData);
+        void DeleteNode(int delData); 
+        void PrintList();
+        void SearchRecursive(node* Ptr, int SearchValue);
 };
 
 #endif
